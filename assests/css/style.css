@@ -211,6 +211,7 @@ header .navbar ul li a:hover {
   flex: 1 1 40rem;
   z-index: 1;
 }
+/* edu image */
 .home .image img {
   width: 70%;
   margin-left: 6rem;
