@@ -277,27 +277,14 @@ header .navbar ul li a:hover {
   position: relative;
   margin-top: 9rem;
 }
-
-.social-icons {
-  list-style-type: none;
-  padding: 0;
+.socials .social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
-
-.social-icons li {
+.socials .social-icons li {
   display: inline-block;
   margin-bottom: 14px;
-}
-
-@media (max-width: 767px) {
-  .social-icons {
-      display: flex;
-      justify-content: center;
-      margin: 0;
-  }
-
-  .social-icons li {
-      margin: 0 10px;
-  }
 }
 .social-icons a {
   font-size: 2rem;
@@ -591,7 +578,7 @@ body {
 
 /* education section starts */
 .education {
-  background: #e5ecfb;
+  background: #E5ECFB;
   min-height: 80vh;
 }
 .education .qoute {
@@ -599,7 +586,7 @@ body {
   text-align: center;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-  margin-top: 0.5rem;
+  margin-top: auto;
 }
 .education .box-container {
   display: flex;
