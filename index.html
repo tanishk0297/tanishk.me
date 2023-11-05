@@ -24,20 +24,36 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Favicon -->
   <link id='favicon' rel="shortcut icon" href="assests\images\TanishkShrivastava.jpeg" type="image/x-png">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    /* Your existing CSS 
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      background-image: url('');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    /* Adjust the position and size as needed */
+  </style>
+  <style>
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      background-image: url('');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+  </style>
+  
   <title> Tanishk Shrivastava </title>
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6547cfe2a84dd54dc488c297/1heg883tm';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+
 
   <style>
     @media only screen and (max-width: 600px) {
@@ -82,6 +98,7 @@
 
   <!-- hero section starts -->
   <section class="home" id="home">
+    <!-- <div id="particles-js"></div> -->
     <div id="particles-js"></div>
 
     <div class="content">
@@ -107,6 +124,7 @@
         </ul>
       </div>
     </div>
+
     <div class="image">
       <img draggable="false" class="tilt" src="assests\images\TanishkShrivastava.jpeg" alt="">
     </div>
@@ -241,12 +259,11 @@
 
   <!-- experience section starts -->
   <section class="experience" id="experience">
+    
 
     <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
 
     <div class="timeline">
-
-
 
       <div class="container left">
         <div class="content">
@@ -377,6 +394,10 @@
 
     </div>
 
+
+</section>
+    
+
   </section>
   <!-- experience section ends -->
 
@@ -386,9 +407,9 @@
     <div class="container">
       <div class="content">
         <div class="image-box">
-          <img draggable="false" src="./assests/images/contact.png" alt="">
+          <img draggable="false" src="./assests/images/contact.jpg" alt="">
         </div>
-        <form  action="https://formspree.io/f/meqbdlop" method="POST" >
+        <form action="https://formspree.io/f/meqbdlop" method="POST">
           <div class="form-group">
             <div class="field">
               <input type="text" name="name" class="formspree-input" placeholder="Name" required>
@@ -451,20 +472,19 @@
 
           <a class="linkedin" href="https://www.linkedin.com/in/tanishk-shrivastava-41422a203/" target="_blank"><i
               class="fab fa-linkedin"></i></a>
-           <a class="github" href="https://github.com/tanishk0297" target="_blank"><i class="fab fa-github"></i></a>
-            <!-- <a class="YouTube" href="https://www.youtube.com/tanishk-shrivastava-41422a203" target="_blank"><i -->
-            <!-- class="fab fa-youtube"></i></a> -->
-            <a class="twitter" href="https://twitter.com/ShriTanishk07" target="_blank"><i
-                class="fab fa-twitter"></i></a>
-            <a class="instagram" href="https://www.instagram.com/tanishkhere/"><i class="fab fa-instagram"
-                target="_blank"></i></a>
-            <a class="gmail" href="mailto:tanishk0297@gmail.com " target="_blank"><i class="fas fa-envelope"></i></a>
-             </div>
+          <a class="github" href="https://github.com/tanishk0297" target="_blank"><i class="fab fa-github"></i></a>
+          <!-- <a class="YouTube" href="https://www.youtube.com/tanishk-shrivastava-41422a203" target="_blank"><i -->
+          <!-- class="fab fa-youtube"></i></a> -->
+          <a class="twitter" href="https://twitter.com/ShriTanishk07" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a class="instagram" href="https://www.instagram.com/tanishkhere/"><i class="fab fa-instagram"
+              target="_blank"></i></a>
+          <a class="gmail" href="mailto:tanishk0297@gmail.com " target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
+    </div>
 
-      <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
-          href="https://www.linkedin.com/in/tanishk-shrivastava-41422a203/"> Tanishk Shrivastava</a></h1>
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
+        href="https://www.linkedin.com/in/tanishk-shrivastava-41422a203/"> Tanishk Shrivastava</a></h1>
 
   </section>
   <!-- footer section ends -->
@@ -543,6 +563,172 @@
     }
     document.getElementById("age").innerText = ` age: ${age}`;
   </script>
+
+
+  <!-- <script>
+  // Initialize Particle.js
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#b9e0e5" // Set the color to #b9e0e5
+      },
+      "shape": {
+        "type": "circle", // Set the shape to circle
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "https://img.icons8.com/ios-filled/50/000000/globe--v1.png", // Set the image to a globe symbol
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      // Add more Particle.js settings here if needed
+    }
+  });
+</script> -->
+
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#b9e0e5"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 10, // Change the particle size to 10
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#808080",
+          "opacity": 0.4,
+          "width": 2 // Change the line width to 2
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+</script>
+
+
+
+
+
+
 
 
 
