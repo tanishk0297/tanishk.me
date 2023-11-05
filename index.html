@@ -126,14 +126,14 @@
 
         <div class="box-container">
           <div class="box">
-            <p><span> age: </span> 20</p>
-            <p><span> college : </span> LNCT Engineering College</p>
+              <p><span id="age"> age: </span> </p>
+              <p><span> college : </span> LNCT Engineering College</p>
           </div>
           <div class="box">
-            <p><span> email : </span> tanishk0297@gmail.com</p>
-            <p><span> place : </span> Bhopal, Madhya Pradesh, India </p>
+              <p><span> email : </span> tanishk0297@gmail.com</p>
+              <p><span> place : </span> Bhopal, Madhya Pradesh, India </p>
           </div>
-        </div>
+      </div>
 
         <div class="resumebtn">
           <a href="assests\images\TanishkShrivastavaResume.pdf" class="btn"><span>Resume</span>
@@ -463,6 +463,17 @@
         });
       });
     });
+  </script>
+
+  <script>
+    const birthDate = new Date("2003-04-17");
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const isBirthday = today.getMonth() === birthDate.getMonth() && today.getDate() === birthDate.getDate();
+    if (!isBirthday && (today.getMonth() > birthDate.getMonth() || (today.getMonth() === birthDate.getMonth() && today.getDate() > birthDate.getDate()))) {
+        age++;
+    }
+    document.getElementById("age").innerText = ` age: ${age}`;
   </script>
   
   
