@@ -277,14 +277,27 @@ header .navbar ul li a:hover {
   position: relative;
   margin-top: 9rem;
 }
-.socials .social-icons {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+
+.social-icons {
+  list-style-type: none;
+  padding: 0;
 }
-.socials .social-icons li {
+
+.social-icons li {
   display: inline-block;
   margin-bottom: 14px;
+}
+
+@media (max-width: 767px) {
+  .social-icons {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+  }
+
+  .social-icons li {
+      margin: 0 10px;
+  }
 }
 .social-icons a {
   font-size: 2rem;
