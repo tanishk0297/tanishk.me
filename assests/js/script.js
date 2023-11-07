@@ -44,7 +44,7 @@ $(document).ready(function () {
 document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "visible") {
     document.title = "Portfolio | Tanishk Shrivastava";
-    $("#favicon").attr("href", "assests/images/favicon.png");
+    $("#favicon").attr("href", "assests/images/contact.jpg");
   } else {
     document.title = "Come Back To Portfolio";
   }
