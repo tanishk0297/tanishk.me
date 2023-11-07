@@ -24,6 +24,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Favicon -->
   <link id='favicon' rel="shortcut icon" href="assests\images\TanishkShrivastava.jpeg" type="image/x-png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <style>
     /* Your existing CSS 
@@ -51,7 +52,9 @@
       background-repeat: no-repeat;
     }
   </style>
-  
+
+
+
   <title> Tanishk Shrivastava </title>
 
 
@@ -66,6 +69,33 @@
     }
   </style>
 
+<style>
+
+body {
+            font-family: Arial, sans-serif;
+        }
+        .vr-text {
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+  /* Desktop View */
+  @media only screen and (min-width: 600px) {
+      #vr-image1 {
+          width: 500px;
+          height: 350px;
+      }
+  }
+
+  /* Mobile View */
+  @media only screen and (max-width: 599px) {
+      #vr-image1 {
+          width: 360px;
+          height: 320px;
+      }
+  }
+</style>
 
 </head>
 
@@ -214,6 +244,22 @@
 
 
   <!--  skills section ends  -->
+<!-- VR section starts -->
+<section class="skills" id="vr">
+  <h2 class="heading">Experience VR Now</h2>
+  <!-- <div class="vr-content"> -->
+    <div>
+      <img id="vr-image1" src="assests\images\vr.jpg" alt="VR Experience">
+    </div>
+    <div class="vr-text">
+      <h2>Step into a new dimension with our immersive VR experience! Explore worlds beyond your imagination.</h2>
+  </div>
+
+    <button class="more-btn">Launch VR</button>
+  <!-- </div> -->
+</section>
+<!-- VR section ends -->
+
 
 
   <!--education section starts -->
@@ -259,7 +305,7 @@
 
   <!-- experience section starts -->
   <section class="experience" id="experience">
-    
+
 
     <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
 
@@ -395,8 +441,8 @@
     </div>
 
 
-</section>
-    
+  </section>
+
 
   </section>
   <!-- experience section ends -->
@@ -566,44 +612,44 @@
 
 
   <script>
-  // Initialize Particle.js
-  particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 600
-        }
-      },
-      "color": {
-        "value": "#b9e0e5" // Set the color to #b9e0e5
-      },
-      "shape": {
-        "type": "circle", // Set the shape to circle
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
+    // Initialize Particle.js
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 30,
+          "density": {
+            "enable": true,
+            "value_area": 600
+          }
         },
-        "polygon": {
-          "nb_sides": 5
+        "color": {
+          "value": "#b9e0e5" // Set the color to #b9e0e5
         },
-        
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      // Add more Particle.js settings here if needed
-    }
-  });
-</script>
+        "shape": {
+          "type": "circle", // Set the shape to circle
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        // Add more Particle.js settings here if needed
+      }
+    });
+  </script>
 
 
   <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
