@@ -26,20 +26,13 @@
   <link id='favicon' rel="shortcut icon" href="assests\images\TanishkShrivastava.jpeg" type="image/x-png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <style>
-    /* Your existing CSS 
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(255, 255, 255);
-      background-image: url('');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 50%;
-    }
-    /* Adjust the position and size as needed */
-  </style>
+  <script>
+    window.addEventListener('error', function (e) {
+      if (e && e.error && e.error.message.includes('404')) {
+        window.location.href = '404.html';
+      }
+    });
+  </script>
   <style>
     #particles-js {
       position: absolute;
@@ -52,7 +45,6 @@
       background-repeat: no-repeat;
     }
   </style>
-
 
 
   <title> Tanishk Shrivastava </title>
@@ -69,33 +61,34 @@
     }
   </style>
 
-<style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-body {
-            font-family: Arial, sans-serif;
-        }
-        .vr-text {
-            text-align: center;
-            margin-top: 20px;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-        }
-  /* Desktop View */
-  @media only screen and (min-width: 600px) {
-      #vr-image1 {
-          width: 500px;
-          height: 350px;
-      }
-  }
+    .vr-text {
+      text-align: center;
+      margin-top: 20px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
 
-  /* Mobile View */
-  @media only screen and (max-width: 599px) {
+    /* Desktop View */
+    @media only screen and (min-width: 600px) {
       #vr-image1 {
-          width: 345px;
-          height: 320px;
+        width: 500px;
+        height: 350px;
       }
-  }
-</style>
+    }
+
+    /* Mobile View */
+    @media only screen and (max-width: 599px) {
+      #vr-image1 {
+        width: 345px;
+        height: 320px;
+      }
+    }
+  </style>
 
 </head>
 
@@ -123,6 +116,7 @@ body {
     </nav>
   </header>
   <!-- navbar ends -->
+
 
 
 
@@ -242,25 +236,25 @@ body {
     </ul>
     <a href="https://www.linkedin.com/in/tanishk-shrivastava/details/skills/" class="more-btn">More</a>
   </section>
-  
-  
+
+
   <!--  skills section ends  -->
   <!-- VR section starts -->
   <section class="skills" id="vr">
     <h2 class="heading">Experience VR Now</h2>
     <!-- <div class="vr-content"> -->
-      <div>
-        <img id="vr-image1" src="assests\images\vr.jpg" alt="VR Experience">
-      </div>
-      <div class="vr-text">
-        <h2>Step into a new dimension with our immersive VR experience! Explore worlds beyond your imagination.</h2>
-      </div>
-      
-      <!-- <button class="more-btn">Launch VR</button> -->
-      <a href="https://mywebar.com/p/tanishk" class="more-btn" target ="_blank">Launch VR</a>
-  <!-- </div> -->
-</section>
-<!-- VR section ends -->
+    <div>
+      <img id="vr-image1" src="assests\images\vr.jpg" alt="VR Experience">
+    </div>
+    <div class="vr-text">
+      <h2>Step into a new dimension with our immersive VR experience! Explore worlds beyond your imagination.</h2>
+    </div>
+
+    <!-- <button class="more-btn">Launch VR</button> -->
+    <a href="https://mywebar.com/p/tanishk" class="more-btn" target="_blank">Launch VR</a>
+    <!-- </div> -->
+  </section>
+  <!-- VR section ends -->
 
 
 
@@ -653,127 +647,6 @@ body {
       }
     });
   </script>
-
-
-  <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS('particles-js', {
-      "particles": {
-        "number": {
-          "value": 60,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#b9e0e5"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 3
-          },
-          
-        },
-        "opacity": {
-          "value": 0.2,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 5, // Change the particle size to 10
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#808080",
-          "opacity": 0.4,
-          "width": 2 // Change the line width to 2
-        },
-        "move": {
-          "enable": true,
-          "speed": 6,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "repulse"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 400,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
-      },
-      "retina_detect": true
-    });
-</script> -->
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
