@@ -89,10 +89,19 @@
       }
     }
   </style>
+  <script>
+    // This prevents the default action for the keydown event
+    document.addEventListener('keydown', function (event) {
+        if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i')) {
+            event.preventDefault();
+        }
+    });
+    </script>
 
 </head>
 
-<body oncontextmenu="return false">
+<body oncontextmenu="return false;" onkeydown="return (event.key != 'i' && event.ctrlKey && event.shiftKey)">
+  
 
 
   <!-- navbar starts -->
