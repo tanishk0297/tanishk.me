@@ -6,279 +6,142 @@
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <!--Stylesheet-->
-    <style media="screen">
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
+    <style>
         body {
-            height: 100vh;
-            /* background-color: #0aa0ca; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .wrapper {
-            width: 40%;
-            min-width: 590px;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            left: 50%;
-            top: 50%;
-        }
-
-        .container {
-            width: 100%;
-            height: 100%;
-            padding: 30px 30px 50px;
-            background-color: white;
-            border: 2px solid rgba(255, 255, 255, 0.06);
-            border-radius: 10px;
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            overflow: auto;
-            /* Make the container scrollable */
-            max-height: 700px;
-            /* Set a max height for the container */
-        }
-
-        .container * {
-            font-family: "Poppins", sans-serif;
-            color: black;
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                max-height: 10000px;
-                /* Set a new max height for the container in mobile view */
-            }
+            background-color: #ea3c3b;
         }
 
         h2 {
+            font-size: 34px;
+            color: white;
             margin-bottom: 50px;
-            letter-spacing: 2px;
-            text-align: center;
-            font-size: 33px;
-            font-weight: bold;
         }
 
-        .skills:not(:last-child) {
-            margin-bottom: 30px;
+        /* Panel */
+        .panel {
+            display: block;
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            border-radius: 15px;
+            overflow: hidden;
         }
 
-        .details {
+        .panel__header {
+            display: block;
             width: 100%;
-            display: flex;
-            justify-content: space-between;
+            padding: 15px 25px;
+            background-color: white;
+        }
+
+        .panel__content {
+            display: block;
+            padding: 25px 25px 50px;
+            background-color: #2b303b;
+        }
+
+        .panel__circle {
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .panel__circle--red {
+            left: 25px;
+            background-color: #ea3c3b;
+        }
+
+        .panel__circle--orange {
+            left: 55px;
+            background-color: #f4b400;
+        }
+
+        .panel__circle--green {
+            left: 85px;
+            background-color: #0da984;
+        }
+
+        /* Skillbar */
+        .skillbar {
+            display: block;
+            width: 100%;
+            height: 50px;
+            background-color: #323940;
+            margin-bottom: 25px;
+        }
+
+        .skillbar__title {
+            color: white;
+            font-size: 18px;
             margin-bottom: 10px;
         }
 
-        .bar {
+        .skillbar__count {
+            display: block;
+            height: 50px;
+            background-color: #0da984;
+            transform-origin: left center;
+            transform: scale3d(0, 1, 1);
+            transition: transform 500ms cubic-bezier(0.4, 0, 1, 1);
+        }
+
+        .skillbar__count.is-active {
+            transform: scale3d(1, 1, 1);
+        }
+
+        /* Switch Button */
+        .btn-switch {
             position: relative;
-            border: 2px solid #0d96e0;
-            border-radius: 20px;
+            display: inline-block;
+            width: 100px;
+            height: 45px;
+            border-radius: 100px;
+            cursor: pointer;
+            transform: translate3d(0, 0, 0);
+            background-color: #323940;
         }
 
-        .bar div {
-            position: relative;
-            width: 0;
-            height: 9px;
-            border-radius: 10px;
-            background-color: #0d96e0;
+        .btn-switch::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            background-color: #0da984;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        #html-bar {
-            animation: html-fill 5s 2s infinite;
+        .btn-switch::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
         }
 
-        @keyframes html-fill {
-            100% {
-                width: 90%;
-            }
+        .btn-switch.is-active::before {
+            opacity: 1;
         }
 
-        #css-bar {
-            animation: css-fill 5s 2s infinite;
-        }
-
-        @keyframes css-fill {
-            100% {
-                width: 75%;
-            }
-        }
-
-        #js-bar {
-            animation: js-fill 5s 2s infinite;
-        }
-
-        @keyframes js-fill {
-            100% {
-                width: 72%;
-            }
-        }
-
-        #jQuery-bar {
-            animation: jQuery-fill 5s 2s infinite;
-        }
-
-        @keyframes jQuery-fill {
-            100% {
-                width: 58%;
-            }
-        }
-
-        #react-bar {
-            animation: react-fill 5s 2s infinite;
-        }
-
-        @keyframes react-fill {
-            100% {
-                width: 69%;
-            }
-        }
-
-        #expressjs-bar {
-            animation: expressjs-fill 5s 2s infinite;
-        }
-
-        @keyframes expressjs-fill {
-            100% {
-                width: 53%;
-            }
-        }
-
-        #nodejs-bar {
-            animation: nodejs-fill 5s 2s infinite;
-        }
-
-        @keyframes nodejs-fill {
-            100% {
-                width: 72%;
-            }
-        }
-
-        #mongodb-bar {
-            animation: mongodb-fill 5s 2s infinite;
-        }
-
-        @keyframes mongodb-fill {
-            100% {
-                width: 47%;
-            }
-        }
-
-        #python-bar {
-            animation: python-fill 5s 2s infinite;
-        }
-
-        @keyframes python-fill {
-            100% {
-                width: 80%;
-            }
-        }
-
-        /* Add keyframes and styles for other skills */
-        #c-bar {
-            animation: c-fill 5s 2s infinite;
-        }
-
-        @keyframes c-fill {
-            100% {
-                width: 67%;
-            }
-        }
-
-        #oops-bar {
-            animation: oops-fill 5s 2s infinite;
-        }
-
-        @keyframes oops-fill {
-            100% {
-                width: 72%;
-            }
-        }
-
-        /* Add similar keyframes and styles for other skills */
-        #salesforce-bar {
-            animation: salesforce-fill 5s 2s infinite;
-        }
-
-        @keyframes salesforce-fill {
-            100% {
-                width: 63%;
-            }
-        }
-
-        #figma-bar {
-            animation: figma-fill 5s 2s infinite;
-        }
-
-        @keyframes figma-fill {
-            100% {
-                width: 92%;
-            }
-        }
-
-        /* Add similar keyframes and styles for other skills */
-        #uiux-bar {
-            animation: uiux-fill 5s 2s infinite;
-        }
-
-        @keyframes uiux-fill {
-            100% {
-                width: 87%;
-            }
-        }
-
-        #prompt-engineering-bar {
-            animation: prompt-engineering-fill 5s 2s infinite;
-        }
-
-        @keyframes prompt-engineering-fill {
-            100% {
-                width: 87%;
-            }
-        }
-
-        #arvr-bar {
-            animation: arvr-fill 5s 2s infinite;
-        }
-
-        @keyframes arvr-fill {
-            100% {
-                width: 43%;
-            }
-        }
-
-        #new-skill-bar {
-            animation: break 5s 2s infinite;
-        }
-
-
-
-        @keyframes break {
-            0% {
-                width: 0;
-            }
-
-            50% {
-                width: 100%;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-            }
-
-            100% {
-                width: 110%;
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 0;
-            }
+        .btn-switch.is-active::after {
+            transform: translate3d(55px, 0, 0);
         }
     </style>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+    </script>
+
 
     <style>
         #particles-js {
@@ -294,218 +157,263 @@
             /* Adjust the z-index to ensure it's behind other content */
         }
     </style>
+    <style>
+        body {
+            background-color: #ea3c3b;
+        }
+
+        h2 {
+            font-size: 34px;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        /* Panel */
+        .panel {
+            display: block;
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .panel__header {
+            display: block;
+            width: 100%;
+            padding: 15px 25px;
+            background-color: white;
+        }
+
+        .panel__content {
+            display: block;
+            padding: 25px 25px 50px;
+            background-color: #2b303b;
+        }
+
+        .panel__circle {
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .panel__circle--red {
+            left: 25px;
+            background-color: #ea3c3b;
+        }
+
+        .panel__circle--orange {
+            left: 55px;
+            background-color: #f4b400;
+        }
+
+        .panel__circle--green {
+            left: 85px;
+            background-color: #0da984;
+        }
+
+        /* Skillbar */
+        .skillbar {
+            display: block;
+            width: 100%;
+            height: 50px;
+            background-color: #323940;
+            margin-bottom: 25px;
+        }
+
+        .skillbar__title {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .skillbar__count {
+            display: block;
+            height: 50px;
+            background-color: #0da984;
+            transform-origin: left center;
+            transform: scale3d(0, 1, 1);
+            transition: transform 500ms cubic-bezier(0.4, 0, 1, 1);
+        }
+
+        .skillbar__count.is-active {
+            transform: scale3d(1, 1, 1);
+        }
+
+        /* Switch Button */
+        .btn-switch {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 45px;
+            border-radius: 100px;
+            cursor: pointer;
+            transform: translate3d(0, 0, 0);
+            background-color: #323940;
+        }
+
+        .btn-switch::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            background-color: #0da984;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-switch::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
+        }
+
+        .btn-switch.is-active::before {
+            opacity: 1;
+        }
+
+        .btn-switch.is-active::after {
+            transform: translate3d(55px, 0, 0);
+        }
+    </style>
+
+
+
+
+
+
+
+
 </head>
 
 <body>
 
-    <div id="particles-js"></div>
+    <div class="panel">
+        <div class="panel__header">
+            <span class="panel__circle panel__circle--red"></span>
+            <span class="panel__circle panel__circle--orange"></span>
+            <span class="panel__circle panel__circle--green"></span>
 
-    
-
-    <div class="wrapper">
-     
-        <div class="container">
-            <h2>MY SKILLS </h2>
-            <div class="skills">
-                <div class="details">
-                    <span>HTML</span>
-                    <span>90%</span>
-                </div>
-                <div class="bar">
-                    <div id="html-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>CSS</span>
-                    <span>75%</span>
-                </div>
-                <div class="bar">
-                    <div id="css-bar"></div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="details">
-                    <span>Bootstrap</span>
-                    <span>70%</span>
-                </div>
-                <div class="bar">
-                    <div id="jQuery-bar"></div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="details">
-                    <span>Javascript</span>
-                    <span>72%</span>
-                </div>
-                <div class="bar">
-                    <div id="js-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>React</span>
-                    <span>69%</span>
-                </div>
-                <div class="bar">
-                    <div id="react-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>Express.Js</span>
-                    <span>53%</span>
-                </div>
-                <div class="bar">
-                    <div id="expressjs-bar"></div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="details">
-                    <span>Node.js</span>
-                    <span>72%</span>
-                </div>
-                <div class="bar">
-                    <div id="nodejs-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>Mongo Db</span>
-                    <span>47%</span>
-                </div>
-                <div class="bar">
-                    <div id="mongodb-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>Python</span>
-                    <span>80%</span>
-                </div>
-                <div class="bar">
-                    <div id="python-bar"></div>
-                </div>
-            </div>
-            <!-- Add similar blocks for other skills -->
-            <div class="skills">
-                <div class="details">
-                    <span>C</span>
-                    <span>67%</span>
-                </div>
-                <div class="bar">
-                    <div id="c-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>OOPS/C++</span>
-                    <span>72%</span>
-                </div>
-                <div class="bar">
-                    <div id="oops-bar"></div>
-                </div>
-            </div>
-            <!-- Add similar blocks for other skills -->
-            <div class="skills">
-                <div class="details">
-                    <span>Salesforce</span>
-                    <span>63%</span>
-                </div>
-                <div class="bar">
-                    <div id="salesforce-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>Figma</span>
-                    <span>92%</span>
-                </div>
-                <div class="bar">
-                    <div id="figma-bar"></div>
-                </div>
-            </div>
-            <!-- Add similar blocks for other skills -->
-            <div class="skills">
-                <div class="details">
-                    <span>UI/UX</span>
-                    <span>87%</span>
-                </div>
-                <div class="bar">
-                    <div id="uiux-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>Prompt Engineering</span>
-                    <span>87%</span>
-                </div>
-                <div class="bar">
-                    <div id="prompt-engineering-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>Ar/Vr</span>
-                    <span>43%</span>
-                </div>
-                <div class="bar">
-                    <div id="arvr-bar"></div>
-                </div>
-            </div>
-            <div class="skills">
-                <div class="details">
-                    <span>Possibility Of Learning New Skills</span>
-                    <span>110%</span>
-                </div>
-                <div class="bar">
-                    <div id="new-skill-bar"></div>
-                </div>
-            </div>
         </div>
-    </div>
+
+        <div class="panel__content">
+            <div>
+                <h2 class="h2">Skills</h2>
+                <div id="btn-switch" class="btn-switch" justify="center"></div>
+            </div>
+
+            <div class="skillbar__title">html5</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="90%"></div>
+            </div><!-- /.skillbar -->
+
+            <div class="skillbar__title">css3</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="95%"></div>
+            </div><!-- /.skillbar -->
+
+            <div class="skillbar__title">javascript</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="70%"></div>
+            </div><!-- /.skillbar -->
+
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="80%"></div>
+            </div><!-- /.skillbar -->
+
+
+
+
+
+        </div><!-- /.panel__content -->
+    </div><!-- /.panel -->
 
     <script>
-        // Initialize Particle.js
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 80, // Increase the number of particles
-                    "density": {
-                        "enable": true,
-                        "value_area": 800 // Increase the value area for density
-                    }
-                },
-                "color": {
-                    "value": "#ffffff" // Change the color to white or another contrasting color
-                },
-                "shape": {
-                    "type": "circle", // Set the shape to circle
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                // Add more Particle.js settings here if needed
+        var btnSwtich = document.getElementById('btn-switch');
+        var skillCount = document.querySelectorAll('.skillbar__count');
+
+        function skillCountWidth() {
+            var i;
+            var sc = skillCount.length;
+
+            for (i = 0; i < sc; i++) {
+                var attr = skillCount[i].getAttribute("data-percent");
+                skillCount[i].style.width = attr;
             }
-        });
+        }
+
+        function activeBar() {
+            var i;
+            var sc = skillCount.length;
+
+            for (i = 0; i < sc; i++) {
+                skillCount[i].classList.toggle('is-active');
+            }
+        }
+
+        btnSwtich.onclick = function () {
+            activeBar();
+            skillCountWidth();
+
+            var ups = btnSwtich.classList.contains('is-active') ? btnSwtich.classList.remove('is-active') : btnSwtich.classList.add('is-active');
+
+        };
     </script>
+
 </body>
 
 </html>
