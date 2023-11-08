@@ -73,38 +73,22 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // <!-- tilt js effect ends -->
 
 // Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {},
-  Tawk_LoadStart = new Date();
-(function () {
-  var s1 = document.createElement("script"),
-    s0 = document.getElementsByTagName("script")[0];
-  s1.async = true;
-  s1.src = "https://embed.tawk.to/60f70460649e0a0a5ccd22a7/1fb2ei71o";
-  s1.charset = "UTF-8";
-  s1.setAttribute("crossorigin", "*");
-  s0.parentNode.insertBefore(s1, s0);
+// <!--Start of Tawk.to Script-->
+
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6547cfe2a84dd54dc488c297/1heg883tm';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
 })();
+
+// <!--End of Tawk.to Script-->
 // End of Tawk.to Live Chat
 
-// <!-- emailjs to mail contact form data -->
-$("#contact-form").submit(function (event) {
-  //event.preventdefault();
 
-  event.preventDefault();
-  emailjs.init("tKcnAF73jMw0tRWFB");
-  console.log("form submitted");
-  emailjs.sendForm("service_sxhkdba", "template_9fbmhxi", "#contact-form").then(
-    function (response) {
-      console.log("SUCCESS!", response.status, response.text);
-      document.getElementById("contact-form").reset();
-      alert("Form Submitted Successfully");
-    },
-    function (error) {
-      console.log("FAILED...", error);
-      alert("Form Submission Failed! Try Again");
-    }
-  );
-});
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
