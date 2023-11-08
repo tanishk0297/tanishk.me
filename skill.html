@@ -147,10 +147,10 @@
         #particles-js {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 200%;
             background-color: #0ac7ca;
             background-image: url('');
-            background-size: cover;
+            background-size: flex;
             background-position: 50% 50%;
             background-repeat: no-repeat;
             z-index: -1;
@@ -159,7 +159,7 @@
     </style>
     <style>
         body {
-            background-color: #ea3c3b;
+            background-color: #0984AD;
         }
 
         h2 {
@@ -219,7 +219,7 @@
             display: block;
             width: 100%;
             height: 50px;
-            background-color: #323940;
+            background-color: #1c3a58;
             margin-bottom: 25px;
         }
 
@@ -232,7 +232,7 @@
         .skillbar__count {
             display: block;
             height: 50px;
-            background-color: #0da984;
+            background-color: rgb(13, 143, 169);
             transform-origin: left center;
             transform: scale3d(0, 1, 1);
             transition: transform 500ms cubic-bezier(0.4, 0, 1, 1);
@@ -300,7 +300,7 @@
 </head>
 
 <body>
-
+    <div id="particles-js"></div>
     <div class="panel">
         <div class="panel__header">
             <span class="panel__circle panel__circle--red"></span>
@@ -322,57 +322,72 @@
 
             <div class="skillbar__title">css3</div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="95%"></div>
+                <div class="skillbar__count" data-percent="80%"></div>
             </div><!-- /.skillbar -->
 
             <div class="skillbar__title">javascript</div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="70%"></div>
+                <div class="skillbar__count" data-percent="72%"></div>
             </div><!-- /.skillbar -->
 
-            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar__title">Bootstrap</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="70%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">React </div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="68%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">Express.Js</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="53%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">Node.js</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="72%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">Mongo Db</div>
+            <div class="skillbar">
+                <div class="skillbar__count" data-percent="47%"></div>
+            </div><!-- /.skillbar -->
+            <div class="skillbar__title">Python</div>
             <div class="skillbar">
                 <div class="skillbar__count" data-percent="80%"></div>
             </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar__title">C </div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
+                <div class="skillbar__count" data-percent="67%"></div>
             </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar__title">OOPS/C++</div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
+                <div class="skillbar__count" data-percent="72%"></div>
             </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar__title">Salesforce</div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
+                <div class="skillbar__count" data-percent="63%"></div>
             </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar__title">Figma</div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
+                <div class="skillbar__count" data-percent="92%"></div>
             </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
+            <div class="skillbar__title">UI/UX</div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
+                <div class="skillbar__count" data-percent="87%"></div>
             </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
+
+            <div class="skillbar__title">Prompt Engineering</div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
+                <div class="skillbar__count" data-percent="87%"></div>
             </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
+
+            <div class="skillbar__title">Ar/Vr</div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
+                <div class="skillbar__count" data-percent="87%"></div>
             </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
+
+            <div class="skillbar__title">Possibility Of Learning New Skills</div>
             <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
-            </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
-            <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
-            </div><!-- /.skillbar -->
-            <div class="skillbar__title">photoshop / illustrator</div>
-            <div class="skillbar">
-                <div class="skillbar__count" data-percent="80%"></div>
+                <div class="skillbar__count" data-percent="110%"></div>
             </div><!-- /.skillbar -->
 
 
@@ -413,7 +428,44 @@
 
         };
     </script>
-
+ <script>
+    // Initialize Particle.js
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 80, // Increase the number of particles
+                "density": {
+                    "enable": true,
+                    "value_area": 800 // Increase the value area for density
+                }
+            },
+            "color": {
+                "value": "#ffffff" // Change the color to white or another contrasting color
+            },
+            "shape": {
+                "type": "circle", // Set the shape to circle
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            // Add more Particle.js settings here if needed
+        }
+    });
+</script>
 </body>
 
 </html>
